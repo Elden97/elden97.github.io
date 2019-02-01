@@ -11,7 +11,10 @@
     "node-sass": "^4.11.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
+      "css-watch": "npm run css-build",
+      "start": "npm run css-watch && google-chrome index.html"
   },
   "repository": {
     "type": "git",
